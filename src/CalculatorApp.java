@@ -36,10 +36,14 @@ public class CalculatorApp {
 
         Calculator calculator = new Calculator();
         CalculatorApp calculatorApp = new CalculatorApp(calculator);
+        calculatorApp.run();
+    }
+
+    public void run() {
         Scanner scanner = new Scanner(System.in);
         String line = null;
         while (!(line = scanner.nextLine()).equals("exit")) {
-            System.out.println(calculatorApp.executeCommand(line));
+            System.out.println(executeCommand(line));
         }
     }
 }
