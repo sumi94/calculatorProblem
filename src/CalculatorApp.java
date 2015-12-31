@@ -2,12 +2,16 @@ import java.util.Scanner;
 
 public class CalculatorApp {
     private Calculator calculator;
+    private Parser parser;
 
-    public CalculatorApp(Calculator calculator) {
+    public CalculatorApp(Calculator calculator, Parser parser, InputReader inputReader, OutputWriter outputWriter) {
 
 
         this.calculator = calculator;
+        this.parser = parser;
     }
+
+
 
     public double executeCommand(String command) {
 
@@ -35,8 +39,8 @@ public class CalculatorApp {
     public static void main(String[] args) {
 
         Calculator calculator = new Calculator();
-        CalculatorApp calculatorApp = new CalculatorApp(calculator);
-        calculatorApp.run();
+//        CalculatorApp calculatorApp = new CalculatorApp(calculator, new ConsoleParser(new Scanner(System.in)));
+//        calculatorApp.run();
     }
 
     public void run() {
